@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2 JS experimentation selections and loops</title>
+</head>
+<body>
+  <main>
+    <h1 id="answer">Your color is: </h1>
+  </main>
+  <script>
+    const yourColor = prompt("Please provide a color from (red, green, blue): ");
+
+    const isColor = (color) => {
+      if (color === "red") {
+        changeColorText("red");
+      } else if (color === "blue") {
+        changeColorText("blue");
+      } else if (color === "green") {
+        changeColorText("green");
+      } else {
+        changeColorText("unknown");
+      }
+    }
+
+    const changeColorText = (color) => {
+      const answerElement = document.getElementById("answer");
+      answerElement.textContent = `Your color is: ${color}`;
+      answerElement.style.color = `${color}`;
+    }
+
+    isColor(yourColor);
+  </script>
+</body>
+</html>
