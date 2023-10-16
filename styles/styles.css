@@ -19,6 +19,9 @@ body {
   box-sizing: border-box;
   font-family: var(--font-lato);
   background-color: var(--color-bone);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .logo {
@@ -158,6 +161,7 @@ footer {
   color: var(--color-bone);
   text-align: center;
   padding: .1rem;
+  margin-top: auto;
 }
 
 footer a {
