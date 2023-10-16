@@ -10,8 +10,10 @@
     <h1 id="answer">Your color is: </h1>
   </main>
   <script>
+    // take user input
     const yourColor = prompt("Please provide a color from (red, green, blue): ");
 
+    // check if its one of the following color
     const isColor = (color) => {
       if (color === "red") {
         changeColorText("red");
@@ -24,6 +26,7 @@
       }
     }
 
+    // change dom to reflect the your input color
     const changeColorText = (color) => {
       const answerElement = document.getElementById("answer");
       answerElement.textContent = `Your color is: ${color}`;
