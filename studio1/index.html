@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Mad Libs</title>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Mad Libs!</h1>
+  </header>
+  <main>
+    <form id="madLibsForm">
+      <label for="noun">Enter a Noun:</label>
+      <input type="text" id="noun" required>
+      <input type="submit" value="Generate Mad Libs">
+    </form>
+  </main>
+  <div class="hidden">
+    <p>
+      In a <span id='adj1'></span> 
+      forest, a 
+      <span id='noun1'></span> 
+      often <span id='verb1'></span> 
+      during the <span id='time'></span>. 
+      One day, this <span id='noun1'></span> found a 
+      <span id='adj2'></span> 
+      <span id='noun2'></span> near a 
+      <span id='location'></span>. It was a <span id='adj3'></span> 
+      sight and made the <span id='noun1'></span> feel 
+      <span id='emotion'></span>.</p>
+  </div>
+  <script src="script.js" defer></script> 
+</body>
+</html>
