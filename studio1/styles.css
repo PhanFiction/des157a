@@ -11,24 +11,30 @@ body {
 
 header {
   text-align: center;
-  padding: 1rem 0;
-  background-color: #4287f5;
-  color: #fff;
+  background-image: url('images/banner.png');
+  background-size: cover;
+  padding: 4.5rem;
 }
 
-main {
+main, .previewer {
   margin: 2rem;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+input {
+  display: inline-block;
+  width: 6em;
+  position: relative;
+  border: none;
+  padding: .3rem;
+  border-radius: 5px;
 }
 
 label {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
+  display: inline-block;
+  width: 6em;
+  padding-top: 1.5em;
 }
+
 
 input[type="text"] {
   padding: 0.5rem;
@@ -54,4 +60,44 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #2d64d6;
   color: #f7f7f7;
+  font-weight: 900;
+}
+
+form, .previewer {
+  padding: 20px 40px;
+  border: 1px solid #0000005c;
+  border-radius: 10px;
+  box-shadow: 0 0.9px 0.9px -15px rgba(0, 0, 0, 0.042),
+    0 2.1px 2.2px -15px rgba(0, 0, 0, 0.061),
+    0 4px 4.1px -15px rgba(0, 0, 0, 0.075),
+    0 7.1px 7.4px -15px rgba(0, 0, 0, 0.089),
+    0 13.4px 13.8px -15px rgba(0, 0, 0, 0.108),
+    0 32px 33px -15px rgba(0, 0, 0, 0.15);
+}
+
+form span, p {
+  font-size: 1.3rem;
+}
+
+p {
+  line-height: 2.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  margin-top: 1.3rem;
+  border: none;
+  padding: .5rem;
+  border-radius: 5px;
+  border: #0000005c solid 1px;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3498db;
 }
