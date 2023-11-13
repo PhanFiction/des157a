@@ -18,7 +18,6 @@ body {
   font-family: 'Rubik', 'Quicksand', 'Noto Sans', sans-serif;
 }
 
-/* Add your custom styles, transitions, and effects */
 input[type="text"]:focus {
   border: 1px solid #D6D9DC;
   outline: 0;
