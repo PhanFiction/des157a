@@ -1,65 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Every Picture</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-</head>
-<body>
-    <header>
-        <h1>Every Picture</h1>
-    </header>
-    <nav>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-    </nav>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <nav class="nav-list">
+        <ul>
+          <li><a href="#img1">Image 1</a></li>
+          <li><a href="#img2">Image 2</a></li>
+          <li><a href="#img3">Image 3</a></li>
+          <li><a href="#img4">Image 4</a></li>
+        </ul>
+      </nav>
+    </div>
     <main>
-        <article>
-          <img
-            sizes="(max-width: 1000px) 100vw, 1000px"
-            srcset="
-            images/village/img3_cg03ob_c_scale,w_500.png 500w,
-            images/village/img3_cg03ob_c_scale,w_779.png 779w,
-            images/village/img3_cg03ob_c_scale,w_1000.png 1000w"
-            src="images/village/img3_cg03ob_c_scale,w_1000.png"
-            alt="">
-        </article>
-        <article>
-          <img
-            sizes="(max-width: 1000px) 100vw, 1000px"
-            srcset="
-              images/castle/castle2_harfg5_c_scale,w_500.png 500w,
-              images/castle/castle2_harfg5_c_scale,w_779.png 779w,
-              images/castle/castle2_harfg5_c_scale,w_1000.png 1000w"
-            src="images/castle/castle2_harfg5_c_scale,w_1000.png"
-            alt="">
-        </article>
-        <article>
-          <img
-            sizes="(max-width: 1000px) 100vw, 1000px"
-            srcset="
-            images/industrial/img1_bq9xen_c_scale,w_500.png 500w,
-            images/industrial/img1_bq9xen_c_scale,w_779.png 779w,
-            images/industrial/img1_bq9xen_c_scale,w_1000.png 1000w"
-            src="images/industrial/img1_bq9xen_c_scale,w_1000.png"
-            alt="">
-        </article>
-        <article>
-          <img
-            sizes="(max-width: 1000px) 100vw, 1000px"
-            srcset="
-           images/city/img2_qjicir_c_scale,w_500.png 500w,
-           images/city/img2_qjicir_c_scale,w_779.png 779w,
-           images/city/img2_qjicir_c_scale,w_1000.png 1000w"
-            src="images/city/img2_qjicir_c_scale,w_1000.png"
-            alt="">
-        </article>
+      <h1>Every Picture</h1>
+      <article id="img1">
+        <div class="img-container">
+          <div class="zoom-container">
+            <img
+              sizes="(max-width: 1000px) 100vw, 1000px"
+              srcset="
+              images/village/img3_cg03ob_c_scale,w_500.png 500w,
+              images/village/img3_cg03ob_c_scale,w_779.png 779w,
+              images/village/img3_cg03ob_c_scale,w_1000.png 1000w"
+              src="images/village/img3_cg03ob_c_scale,w_1000.png"
+              alt=""
+              class="zoom-image"
+            >
+          </div>
+        </div>
+        <div class="description-container">
+          <div class="title-container">
+            <h3>Village</h3>
+          </div>
+          <div class="text-container">
+            <p>Nestled between rolling hills and surrounded by a dense expanse of ancient woods, the medieval village exudes an air of timeless tranquility. Cobbled streets wind their way through the heart of the settlement, flanked by timber-framed houses adorned with thatched roofs that seem to touch the sky. A central square, bustling with activity, hosts a lively market where villagers trade goods and share tales. The stone walls of a sturdy castle loom at one end, a testament to the village's strategic importance. Surrounding the village, verdant fields yield golden crops, tended by diligent farmers using age-old techniques. The aroma of freshly baked bread wafts from the village bakery, while the distant clang of a blacksmith's hammer echoes through the narrow alleys. The rhythm of daily life in this medieval haven is marked by the tolling of the village bell, a reminder of a community tightly knit by tradition and the shared tapestry of its storied history.</p>
+          </div>
+        </div>
+      </article>
+      <article id="img2">
+        <div class="img-container">
+          <div class="zoom-container">
+            <img
+              sizes="(max-width: 1000px) 100vw, 1000px"
+              srcset="
+                images/castle/castle2_harfg5_c_scale,w_500.png 500w,
+                images/castle/castle2_harfg5_c_scale,w_779.png 779w,
+                images/castle/castle2_harfg5_c_scale,w_1000.png 1000w"
+              src="images/castle/castle2_harfg5_c_scale,w_1000.png"
+              alt=""
+              class="zoom-image"
+            >
+          </div>
+        </div>
+        <div class="description-container">
+          <div class="title-container">
+            <h3>Castle</h3>
+          </div>
+          <div class="text-container">
+            <p>Perched atop a rugged hill, the medieval castle stands as a formidable sentinel against the passage of time. Its imposing stone walls, crowned with crenellations and watchtowers, command attention, casting a watchful gaze over the surrounding landscape. A sturdy drawbridge spans the protective moat, leading to an arched gateway adorned with intricate carvings. Within the castle's courtyard, a bustling hive of activity unfolds—blacksmiths forging armor, servants scurrying to fulfill their duties, and knights honing their skills. The keep, a towering structure at the heart of the fortress, houses the lord's chambers, while the great hall resonates with the echoes of feasts and strategic discussions. Secret passageways and dimly lit dungeons add an air of mystery, while the castle's strategic positioning and robust defenses reflect the medieval era's martial prowess and the intricate interplay of power and protection.</p>
+          </div>
+        </div>
+      </article>
+      <article id="img3">
+        <div class="img-container">
+          <div class="zoom-container">
+            <img
+              sizes="(max-width: 1000px) 100vw, 1000px"
+              srcset="
+              images/industrial/img1_bq9xen_c_scale,w_500.png 500w,
+              images/industrial/img1_bq9xen_c_scale,w_779.png 779w,
+              images/industrial/img1_bq9xen_c_scale,w_1000.png 1000w"
+              src="images/industrial/img1_bq9xen_c_scale,w_1000.png"
+              alt=""
+              class="zoom-image"
+            >
+                    </div>
+          </div>
+        <div class="description-container">
+          <div class="title-container">
+            <h3>Factory</h3>
+          </div>
+          <div class="text-container">
+            <p>The Industrial Revolution factory emerges as the epicenter of transformative change, symbolizing a profound shift in production methods during the late 18th and 19th centuries. These factories, often colossal structures, harness the might of steam engines and later, electrical power, to mechanize manufacturing processes. Inside, a symphony of clanking machinery and hissing steam characterizes the atmosphere as specialized workers operate newly invented tools, elevating productivity to unprecedented levels. Mass production becomes the hallmark, with assembly lines and intricate systems enabling the swift creation of goods on an unprecedented scale. The factory's impact reverberates beyond its walls, reshaping societal structures, labor dynamics, and urban landscapes, drawing rural populations into burgeoning industrial cities. Simultaneously a hub of innovation and a site of labor challenges, the Industrial Revolution factory catalyzes the modernization of economies, setting the stage for a new era in human history.</p>
+          </div>
+        </div>
+      </article>
+      <article id="img4">
+        <div class="img-container">
+          <div class="zoom-container">
+            <img
+              sizes="(max-width: 1000px) 100vw, 1000px"
+              srcset="
+              images/city/img2_qjicir_c_scale,w_500.png 500w,
+              images/city/img2_qjicir_c_scale,w_779.png 779w,
+              images/city/img2_qjicir_c_scale,w_1000.png 1000w"
+              src="images/city/img2_qjicir_c_scale,w_1000.png"
+              alt=""
+              class="zoom-image"
+            >
+          </div>
+        </div>
+        <div class="description-container">
+          <div class="title-container">
+            <h3>Modern City</h3>
+          </div>
+          <div class="text-container">
+            <p>The modern city, a dynamic and complex tapestry of architecture, technology, and diverse cultures, encapsulates the epitome of contemporary urban living. Skyscrapers pierce the skyline, their reflective glass facades mirroring the energy of bustling streets below. Technological marvels intertwine with daily life, from smart infrastructure to ubiquitous connectivity. Public spaces offer a blend of recreational areas and cultural hubs, fostering a sense of community amid the urban sprawl. Efficient transportation networks crisscross the city, connecting neighborhoods and facilitating the constant ebb and flow of its diverse population. Commercial districts hum with the activity of businesses and startups, while residential areas showcase a mix of architectural styles reflecting the city's evolving history. The modern city is a melting pot of ideas, innovation, and creativity, where people from various backgrounds converge, contributing to the vibrant, ever-changing mosaic that defines urban existence in the contemporary era.</p>
+          </div>
+        </div>
+      </article>
     </main>
     <footer>
+      <ul>
+        <li>
+          Create by Steve Wu
+        </li>
+      </ul>
     </footer>
-</body>
+  </body>
 </html>
