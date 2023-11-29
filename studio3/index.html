@@ -11,22 +11,24 @@
 <body>
   <main>
     <h1>Game On</h1>
-    <nav></nav>
-    <section>
-      <div>
+    <section class="playerinfo-container">
+      <div class="player-container">
         <h2>Player 1</h2>
-        <span>Score</span>
+        <span id="player1-score">Score</span>
       </div>
-      <div>
-        <h2>Player 1</h2>
+      <div class="player-container">
+        <h2>Player 2</h2>
+        <span id="player2-score">Score</span>
       </div>
-      <span>Score</span>
     </section>
-    <section>
-      <article>
-        <span>Text</span>
-      </article>
+    <section id="gamecontrol" class="gamecontrol">
+      <button id="startgame" class="btn">Start Game</button>
     </section>
+    <section class="gamecontrol">
+      <div id="game"></div>
+      <div id="actions"></div>
+    </section>
+    <div id="info-container" class="info-container"></div>
   </main>
   <script src="script.js" defer></script>
 </body>

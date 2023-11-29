@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Quicksand:wght@400;500;600;700&family=Rubik:ital,wght@0,500;0,600;1,500&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-moonstone: #0FA3B1;
+  --color-honeydew: #D9E5D6;
+  --color-vanilla: #EDDEA4;
+  --color-atomic-tangerine: #F7A072;
+  --color-sandy-brown: #FF9B42;
+  --font-noto-sans: 'Noto Sans';
+  --font-quicksand: 'Quicksand';
+  --font-rubik: 'Rubik';
+  --color-dark: #232222;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', 'Quicksand', 'Noto Sans', sans-serif;
+  background-color: var(--color-moonstone);
+  color: var(--color-honeydew);
+}
+
+h1 {
+  text-align: center;
+  color: var(--color-honeydew);
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.playerinfo-container {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+  font-family: var(--font-noto-sans);
+  font-size: 1.3rem;
+  color: var(--color-dark);
+}
+
+.player-container {
+  background-color: var(--color-honeydew);
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 200px;
+  border: solid 1px;
+}
+
+.gamecontrol {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn {
+  background: var(--color-vanilla);
+  -webkit-border-radius: 25;
+  -moz-border-radius: 25;
+  border-radius: 25px;
+  font-family: Arial;
+  color: var(--color-dark);
+  font-size: 20px;
+  padding: 12px;
+  text-decoration: none;
+  border: solid 1px;
+}
+
+.btn:hover {
+  background: var(--color-sandy-brown);
+  text-decoration: none;
+}
+
+.info-container {
+  margin-top: 3rem;
+  width: 30vw;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: #232222 solid 1px;
+  overflow-y: scroll;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-container span {
+  font-size: 1rem;
+  margin: .2rem 0 .2rem 0;
+}
+
+.info-container::-webkit-scrollbar {
+  display: none;
+}
