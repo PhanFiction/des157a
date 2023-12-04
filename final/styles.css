@@ -1,53 +1,194 @@
-@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Quicksand:wght@400;500;600;700&family=Rubik:ital,wght@0,500;0,600;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover:wght@400&family=Meera+Inimai:wght@400&family=Inconsolata:wght@600&family=Imprima:wght@400&family=Font+Awesome+5+Brands:wght@400&family=Lemonada:wght@400&display=swap');
 
-:root {
-  --color-black: #050505;
-  --color-magenta: #1B9AAA;
-  --color-bone: #DDDBCB;
-  --color-old-lace: #F5F1E3;
-  --color-white: #FFFFFF;
-  --secondary-light: #ddd;
-  --color-primary-dark: #333;
-  --color-secondary-dark: #444;
-  --font-inclusive-sans: 'Inclusive Sans';
-  --font-lato: 'Lato';
+html {
+  scroll-behavior: smooth;
 }
 
-h1, main, footer {
-  font-family: var(--font-lato);
+:root {
+  --color-light-blue: #A7CECB;
+  --color-cadet-gray: #8BA6A9;
+  --color-cadet-dark-gray: #5b6d6f;
+  --color-raseda-green: #75704E;
+  --color-sage: #CACC90;
+  --color-lemon-chiffon: #F4EBBE;
+  --font-imprima: 'Imprima';
+  --font-inconsolata: 'Inconsolata';
+  --font-irish-grover: 'Irish Grover';
+  --font-meera-inimai: 'Meera Inimai';
+  --font-lemonada: 'Lemonada';
+  --color-dark: #232222;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', 'Quicksand', 'Noto Sans', sans-serif;
+  background-color: var(--color-moonstone);
+  color: var(--color-honeydew);
+}
+
+header {
+  background-color: var(--color-light-blue);
+  border-radius: 8px;
+  filter: blur(4px);
+}
+
+h1 {
+  text-align: center;
+  color: var(--color-raseda-green);
+  font-family: var(--font-irish-grover);
+  font-size: 3rem;
+  margin: 1rem 2rem 1rem 2rem;
+}
+
+p {
+  font-size: 1.3rem;
 }
 
 main {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  background-image: url(./images/city/img2_qjicir_c_scale\,w_1000.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-section {
-  border-radius: 1.5rem;
+#game-form {
+  display: block;
+  background-color: var(--color-light-blue);
   padding: 1rem;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
-  margin: 2rem;
-  width: 70vw;
+  border-radius: 12px;
 }
 
-h1 {
+#game-form h2 {
+  color: var(--color-raseda-green);
   text-align: center;
+  font-family: var(--font-irish-grover);
+  font-size: 2rem;
 }
 
-p {
-  font-size: 1.1rem;
-  line-height: 2rem;
+label {
+  display: block;
+  margin-bottom: 8px;
 }
 
-section {
-  margin-top: 2rem;
+input {
+  padding: 8px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border-color: #CCCCCC;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  box-shadow: 0px 0px 5px rgba(66,66,66,.75);
 }
 
-section h2 {
-  margin: 0;
+input:focus {
+  outline: none;
+  border-style: groove;
+  box-shadow: 0px 0px 10px rgba(66,66,66,.70);
 }
 
-footer {
+button {
+  background-color: var(--color-cadet-gray);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: var(--color-cadet-dark-gray);
+}
+
+.playerinfo-container {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+  font-family: var(--font-noto-sans);
+  font-size: 1.3rem;
+  color: var(--color-dark);
+}
+
+.player-container {
+  background-color: var(--color-honeydew);
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 200px;
+  border: solid 1px;
+}
+
+.gamecontrol {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn {
+  background: var(--color-vanilla);
+  -webkit-border-radius: 25;
+  -moz-border-radius: 25;
+  border-radius: 25px;
+  font-family: Arial;
+  color: var(--color-dark);
+  font-size: 20px;
+  padding: 12px;
+  text-decoration: none;
+  border: solid 1px;
+}
+
+.btn:hover {
+  background: var(--color-sandy-brown);
+  text-decoration: none;
+}
+
+.info-container {
+  margin-top: 3rem;
+  width: 30vw;
+  padding: 2rem;
+  border-radius: 1rem;
   text-align: center;
+  border: #232222 solid 1px;
+  overflow-y: scroll;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-container span {
+  font-size: 1rem;
+  margin: .2rem 0 .2rem 0;
+}
+
+.info-container::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  width: 20%;
+  height: 20%;
 }

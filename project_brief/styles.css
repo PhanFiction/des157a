@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&family=Lato:wght@400;700;900&display=swap');
+
+:root {
+  --color-black: #050505;
+  --color-magenta: #1B9AAA;
+  --color-bone: #DDDBCB;
+  --color-old-lace: #F5F1E3;
+  --color-white: #FFFFFF;
+  --secondary-light: #ddd;
+  --color-primary-dark: #333;
+  --color-secondary-dark: #444;
+  --font-inclusive-sans: 'Inclusive Sans';
+  --font-lato: 'Lato';
+}
+
+h1, main, footer {
+  font-family: var(--font-lato);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  border-radius: 1.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+  margin: 2rem;
+  width: 70vw;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+section h2 {
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+}
