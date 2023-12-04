@@ -5,12 +5,14 @@
   const startGame = document.querySelector('#startgame');
   const gameControl = document.querySelector('#gamecontrol');
   const game = document.querySelector('#game');
-  const score = document.querySelector('#score');
+  const player1Score = document.querySelector('#player1');
+  const player2Score = document.querySelector('#player2');
   const actionArea = document.querySelector('#actions');
   const infoSection = document.querySelector('#info-container');
+  const audio = document.getElementById('myAudio');
   const gameData = {
     dice: ['images/dice1.png', 'images/dice2.png', 'images/dice3.png', 'images/dice4.png', 'images/dice5.png', 'images/dice6.png'],
-    players: ['player 1', 'player 2'],
+    players: ['player1', 'player2'],
     score: [0, 0],
     roll1: 0,
     roll2: 0,
@@ -21,6 +23,14 @@
 
   function addInfo(text) {
     infoSection.innerHTML += `<span>${text}</span>`;
+  }
+
+  function handleScore(player, score) {
+    if(player == 0) {
+      player1Score.textContent = `Score: ${score}`;
+    }else{
+      player2Score.textContent = `Score: ${score}`;
+    }
   }
 
   startGame.addEventListener('click', () => {
@@ -49,9 +59,11 @@ function throwDice() {
     game.innerHTML = `<img src="${gameData.dice[gameData.roll1-1]}">
         <img src="${gameData.dice[gameData.roll2-1]}">`;
     gameData.rollSum = gameData.roll1 + gameData.roll2;
+    audio.play();
     if(gameData.rollSum === 2) {
         addInfo('Oh snap Snake eyes');
         gameData.score[gameData.index] = 0;
+        handleScore(gameData.index, 0);
         gameData.index ? gameData.index = 0 : gameData.index = 1;
         setTimeout(setUpTurn, 2000);
     }else if(gameData.roll1 === 1 || gameData.roll2 === 1){
@@ -59,7 +71,9 @@ function throwDice() {
         addInfo(`sorry, your roll was a one, switchting to ${gameData.players[gameData.index]}`)
         setTimeout(setUpTurn, 2000);
     }else{
-        gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
+        const totalScore = gameData.score[gameData.index] + gameData.rollSum;
+        gameData.score[gameData.index] = totalScore;
+        handleScore(gameData.index, totalScore);
         actionArea.innerHTML = '<button id="rollagain" class="btn">Roll again</button> or <button id="pass" class="btn">Pass</button>';
         document.getElementById('rollagain').addEventListener('click', ()=>{
           setUpTurn();

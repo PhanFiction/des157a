@@ -107,3 +107,8 @@ main {
 .info-container::-webkit-scrollbar {
   display: none;
 }
+
+img {
+  width: 20%;
+  height: 20%;
+}
