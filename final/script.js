@@ -34,7 +34,7 @@
     console.log('Player 1 Name:', player1Name);
     console.log('Player 2 Name:', player2Name);
     console.log('Max Score:', maxScore);
-    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('game-overlay').style.display = 'none';
   }
 
   function addInfo(text) {
