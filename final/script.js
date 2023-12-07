@@ -6,38 +6,41 @@
   const startGame = document.querySelector('#startgame');
   const gameControl = document.querySelector('#gamecontrol');
   const game = document.querySelector('#game');
-  const player1Score = document.querySelector('#player1');
-  const player2Score = document.querySelector('#player2');
+  const player1Name = document.getElementById('player1Name');
+  const player2Name = document.getElementById('player2Name');
+  const player1 = document.getElementById('player1');
+  const player2 = document.getElementById('player2');
+  const player1Score = document.getElementById('player1-score');
+  const player2Score = document.getElementById('player2-score');
   const actionArea = document.querySelector('#actions');
   const infoSection = document.querySelector('#info-container');
   const audio = document.getElementById('myAudio');
+
   const gameData = {
     dice: ['images/dice1.png', 'images/dice2.png', 'images/dice3.png', 'images/dice4.png', 'images/dice5.png', 'images/dice6.png'],
-    players: [],
+    players: ['player1', 'player2'],
     score: [0, 0],
     roll1: 0,
     roll2: 0,
     rollSum: 0,
     index: 0,
-    gameEnd: 29
   };
 
   function gameForm(event) {
-    event.preventDefault(); // Prevents the form from submitting in the traditional way
+    event.preventDefault();
 
-    // Get form data
-    const player1Name = document.getElementById('player1').value;
-    const player2Name = document.getElementById('player2').value;
     const maxScore = document.getElementById('score').value;
 
-    // Do something with the form data (for example, log it to the console)
-    console.log('Player 1 Name:', player1Name);
-    console.log('Player 2 Name:', player2Name);
+    console.log('Player 1 Name:', player1.value);
+    console.log('Player 2 Name:', player2.value);
     console.log('Max Score:', maxScore);
+
+    document.getElementById('player1').innerText = player1.value;
     document.getElementById('game-overlay').style.display = 'none';
   }
 
   function addInfo(text) {
+    document.getElementById('player1').innerText = player1.value;
     infoSection.innerHTML += `<span>${text}</span>`;
   }
 
@@ -51,7 +54,7 @@
 
   startGame.addEventListener('click', () => {
     addInfo('Game has started');
-    gameControl.innerHTML += '<button class="btn" id="quit">Wanna quit?</button>';
+    gameControl.innerHTML += '<button class="btn" id="quit">Quit</button>';
 
     document.getElementById('quit').addEventListener('click', () => {
       location.reload();
@@ -60,7 +63,7 @@
 })
 
 function setUpTurn() {
-  game.innerHTML = `<p>${gameData.players[gameData.index]} turn</p>`;
+  addInfo(`${gameData.players[gameData.index]} turn`);
   actionArea.innerHTML = '<button id="roll" class="btn">Roll</button>';
   document.getElementById('roll').addEventListener('click', ()=>{
     throwDice();
