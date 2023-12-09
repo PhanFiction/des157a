@@ -14,7 +14,8 @@
   const player2Score = document.getElementById('player2-score');
   const actionArea = document.querySelector('#actions');
   const messageContainer = document.getElementById('message-container');
-  const audio = document.getElementById('myAudio');
+  const rollDice = document.getElementById('rolldice');
+  const gameOver = document.getElementById('gameover');
 
   const gameData = {
     dice: ['images/dice1.png', 'images/dice2.png', 'images/dice3.png', 'images/dice4.png', 'images/dice5.png', 'images/dice6.png'],
@@ -90,7 +91,7 @@ function throwDice() {
     game.innerHTML = `<img class="dice" src="${gameData.dice[gameData.roll1-1]}">
         <img class="dice" src="${gameData.dice[gameData.roll2-1]}">`;
     gameData.rollSum = gameData.roll1 + gameData.roll2;
-    audio.play();
+    rollDice.play();
     if(gameData.rollSum === 2) {
         addInfo('Oh snap Snake eyes ');
         gameData.score[gameData.index] = 0;
@@ -105,7 +106,12 @@ function throwDice() {
         const totalScore = gameData.score[gameData.index] + gameData.rollSum;
         gameData.score[gameData.index] = totalScore;
         handleScore(gameData.index, totalScore);
-        actionArea.innerHTML = '<button id="rollagain" class="btn">Roll</button> <button id="pass" class="btn">Pass</button>';
+        actionArea.innerHTML = `
+        <div class="btn-container">
+          <button id="rollagain" class="btn">Roll</button>
+          <button id="pass" class="btn">Pass</button>
+        </div>
+        `;
         document.getElementById('rollagain').addEventListener('click', ()=>{
           setUpTurn();
         });
@@ -119,6 +125,7 @@ function throwDice() {
 
 function checkWinningCondition() {
     if(gameData.score[gameData.index] > gameData.maxScore) {
+      gameOver.play();
       addInfo(`${gameData.players[gameData.index].name} wins with ${gameData.score[gameData.index]} points!`);
       actionArea.innerHTML = '';
       document.getElementById('quit').innerHTML = "Reset";
@@ -128,7 +135,6 @@ function checkWinningCondition() {
 }
 
 function showCurrentScore() {
-  console.log(gameData.players[0].name);
     addInfo(`Score for ${gameData.players[0].name} with
     ${gameData.score[0]} and ${gameData.players[1].name} with
     ${gameData.score[1]}`);

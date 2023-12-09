@@ -149,6 +149,10 @@ button:hover {
   align-items: center;
 }
 
+.btn-container {
+  display: flex;
+}
+
 #vs {
   font-size: 3rem;
   color: var(--color-sage);
@@ -256,4 +260,5 @@ button:hover {
 .dice {
   background-color: white;
   opacity: 50%;
+  width: 20%;
 }
